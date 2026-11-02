@@ -1,16 +1,20 @@
 import { Link, Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { ContextForNav } from "../NavSection";
 import home from "/home-logo.png";
 import watchList from "/watchlist-logo.png";
 import movies from "/movies-logo.png";
 import tv from "/tv-logo.png";
-export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
+
+export const NavOptions = ({ NavOptionsClassName }) => {
+  const pageSelected = useContext(ContextForNav);
   return (
     <>
       <nav className={`${NavOptionsClassName} main-nav`}>
         <div className={`${NavOptionsClassName}-icon-container`}>
           <span
             style={{
-              color: pageClassName == "home" ? "#ffde59" : null,
+              color: pageSelected == "home" ? "#ffde59" : null,
             }}
             className="material-symbols-outlined"
           >
@@ -21,7 +25,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             className="nav-bar-options-icon-container-link home-link"
             to="/Home"
           >
-            {pageClassName == "home" ? (
+            {pageSelected == "home" ? (
               <img
                 src={home}
                 alt="Home text in graffiti style"
@@ -30,7 +34,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             ) : (
               <p
                 style={{
-                  color: pageClassName == "home" ? "orange" : null,
+                  color: pageSelected == "home" ? "orange" : null,
                 }}
               >
                 Home
@@ -39,10 +43,10 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           </Link>
         </div>
         <div
-          className={`${NavOptionsClassName}-icon-container ${pageClassName}`}
+          className={`${NavOptionsClassName}-icon-container ${pageSelected}`}
         >
           <span
-            style={{ color: pageClassName == "watchlist" ? "#ffde59" : null }}
+            style={{ color: pageSelected == "watchlist" ? "#ffde59" : null }}
             className="material-symbols-outlined"
           >
             library_add
@@ -51,7 +55,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             className="nav-bar-options-icon-container-link watchlist-link"
             to="/Watchlist"
           >
-            {pageClassName == "watchlist" ? (
+            {pageSelected == "watchlist" ? (
               <img
                 src={watchList}
                 alt="Watchlist text in graffiti style"
@@ -60,7 +64,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             ) : (
               <p
                 style={{
-                  color: pageClassName == "watchlist" ? "orange" : null,
+                  color: pageSelected == "watchlist" ? "orange" : null,
                 }}
               >
                 Watchlist
@@ -69,10 +73,10 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           </Link>
         </div>
         <div
-          className={`${NavOptionsClassName}-icon-container ${pageClassName}`}
+          className={`${NavOptionsClassName}-icon-container ${pageSelected}`}
         >
           <span
-            style={{ color: pageClassName == "movies" ? "#ffde59" : null }}
+            style={{ color: pageSelected == "movies" ? "#ffde59" : null }}
             className="material-symbols-outlined"
           >
             movie
@@ -81,7 +85,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             className="nav-bar-options-icon-container-link movies-link"
             to="/Movies"
           >
-            {pageClassName == "movies" ? (
+            {pageSelected == "movies" ? (
               <img
                 src={movies}
                 alt="Movies text in graffiti style"
@@ -90,7 +94,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             ) : (
               <p
                 style={{
-                  color: pageClassName == "movies" ? "orange" : null,
+                  color: pageSelected == "movies" ? "orange" : null,
                 }}
               >
                 Movies
@@ -99,10 +103,10 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           </Link>
         </div>
         <div
-          className={`${NavOptionsClassName}-icon-container ${pageClassName}`}
+          className={`${NavOptionsClassName}-icon-container ${pageSelected}`}
         >
           <span
-            style={{ color: pageClassName == "tv" ? "#ffde59" : null }}
+            style={{ color: pageSelected == "tv" ? "#ffde59" : null }}
             className="material-symbols-outlined"
           >
             tv_gen
@@ -111,7 +115,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             className="nav-bar-options-icon-container-link tv-link"
             to="/TV"
           >
-            {pageClassName == "tv" ? (
+            {pageSelected == "tv" ? (
               <img
                 src={tv}
                 alt="TV text in graffiti style"
@@ -120,7 +124,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
             ) : (
               <p
                 style={{
-                  color: pageClassName == "tv" ? "orange" : null,
+                  color: pageSelected == "tv" ? "orange" : null,
                 }}
               >
                 Tv
@@ -138,7 +142,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           <Link to="/Home">
             <span
               className={
-                pageClassName == "home"
+                pageSelected == "home"
                   ? "selected-second-nav-bar-link material-symbols-outlined"
                   : "second-nav-bar-link material-symbols-outlined"
               }
@@ -152,7 +156,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           <Link to="/Watchlist">
             <span
               className={
-                pageClassName == "watchlist"
+                pageSelected == "watchlist"
                   ? "selected-second-nav-bar-link material-symbols-outlined"
                   : "second-nav-bar-link material-symbols-outlined"
               }
@@ -165,7 +169,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           <Link to="/Movies">
             <span
               className={
-                pageClassName == "movies"
+                pageSelected == "movies"
                   ? "selected-second-nav-bar-link material-symbols-outlined"
                   : "second-nav-bar-link material-symbols-outlined"
               }
@@ -178,7 +182,7 @@ export const NavOptions = ({ NavOptionsClassName, pageClassName }) => {
           <Link to="/TV">
             <span
               className={
-                pageClassName == "tv"
+                pageSelected == "tv"
                   ? "selected-second-nav-bar-link material-symbols-outlined"
                   : "second-nav-bar-link material-symbols-outlined"
               }
