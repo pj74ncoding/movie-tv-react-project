@@ -1,0 +1,255 @@
+html {
+  font-size: 16px;
+}
+
+.center-alignment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+*LandingPage Component  
+*/
+
+.Landing-page-section {
+  height: 100vh;
+  height: 100svh;
+  background: linear-gradient(45deg, darkorange, 50%, yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-link {
+  text-decoration: none;
+}
+
+.landing-link > span {
+  color: black;
+
+  font-size: 6rem;
+}
+
+.landing-link > span:hover {
+  cursor: pointer;
+  color: green;
+  transform: scale(1.2);
+}
+
+/*
+* NavBar Component  
+*/
+
+.nav-section {
+  width: 100%;
+  position: fixed;
+  top: 1px;
+}
+.nav-bar {
+  height: clamp(4rem, calc(9vh + 0.5rem), 6rem);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  background-color: black;
+}
+
+.fox-media-logo {
+  display: none;
+  cursor: pointer;
+  border: 2px solid #ffde59;
+  box-shadow: -4px 4px 5px #ff914d;
+}
+.nav-icons-left-container {
+  gap: 10px;
+  position: relative;
+}
+
+.nav-icons-left-container > span:nth-of-type(1) {
+  transition: all 1s ease-in-out;
+}
+.nav-icons-left-container > span:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  transition: all 1s ease-in-out;
+}
+
+.icon-hidden {
+  opacity: 0%;
+  transition: all 500ms ease-in-out;
+}
+.nav-icons-left-container > span {
+  color: white;
+  font-size: 45px;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-icons-left-container > span:hover {
+  cursor: pointer;
+}
+
+.small-screen-fox-media-logo {
+  width: 3.5rem;
+}
+.nav-bar-options-display {
+  display: none !important;
+}
+.nav-bar-options-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-options {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.nav-bar-options > div > span {
+  color: white;
+  font-size: 22px;
+}
+
+.nav-bar-options-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.nav-bar-options-icon-container-link {
+  color: white;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: clamp(1rem, calc(0.1vw + 1rem), 1rem);
+  transition: all 500ms ease-in-out;
+  text-decoration: none;
+}
+
+.home-link {
+  width: clamp(3.2rem, calc(3vw + 1rem), 4rem);
+}
+.watchlist-link {
+  width: clamp(4.8rem, calc(5vw + 1rem), 5rem);
+}
+.movies-link {
+  width: clamp(3.8rem, calc(4vw + 1rem), 5rem);
+}
+.tv-link {
+  width: clamp(2rem, calc(2vw + 1rem), 2.5rem);
+}
+
+.selected-page-logo {
+  height: clamp(1.5rem, 1.5vw + 1rem, 2.3rem);
+}
+.nav-icons-right-container {
+  gap: 1.2rem;
+}
+.nav-icons-right-container > span {
+  color: white;
+  font-size: clamp(32px, calc(1vw + 0.5rem), 35px);
+  transition: all 500ms ease-in-out;
+}
+
+.nav-bar-options-icon-container-link:hover,
+.nav-icons-right-container > *:hover {
+  cursor: pointer;
+  color: #ffd35c;
+  transform: scale(1.05);
+  transition: all 500ms ease-in-out;
+}
+
+.nav-profile-container {
+  background: grey;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: orange;
+  border: 2px solid white;
+  transition: all 500ms ease-in-out;
+}
+
+/* 
+* Second nav 
+*/
+.second-nav-bar {
+  display: none;
+  height: 100%;
+}
+
+.second-nav-bar-link-container {
+  height: 100%;
+  width: 2.5rem;
+}
+.second-nav-bar-link {
+  color: white;
+  font-size: 26px;
+}
+
+.selected-second-nav-bar-link {
+  color: #ffde59;
+  font-size: 31px;
+}
+
+/*
+* Hamburger Menu 
+*/
+
+.hamburger-options-not-displayed {
+  transform: translate(-100%);
+}
+
+.hamburger-options-hidden {
+  transform: translate(-100%);
+  transition: all 1s ease-in-out;
+}
+
+.hamburger-options-visable {
+  transform: translate(0);
+  transition: all 1s ease-in-out;
+}
+.Hamburger-nav-options {
+  margin-top: clamp(4rem, calc(9vh + 0.5rem), 6rem);
+  height: clamp(13rem, 4vw, 19rem);
+  width: 100%;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 1px;
+}
+.nav-options {
+  height: 100%;
+  background: linear-gradient(45deg, black, 85%, rgba(0, 0, 0, 0.5));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1.5rem;
+}
+
+.nav-options > div > span {
+  color: white;
+  font-size: 25px;
+}
+
+.nav-options-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-options-icon-container > p {
+  color: white;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.2rem;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-options-icon-container > p:hover {
+  cursor: pointer;
+  color: #ffd35c;
+  transform: scale(1.05);
+  transition: all 500ms ease-in-out;
+}

@@ -1,0 +1,85 @@
+/* Small devices (landscape phones, 576px and up)  */
+
+@media (min-width: 500px) and (max-width: 770px) {
+  .nav-icons-left-container > span {
+    display: none;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .nav-bar-options-display {
+    display: flex !important;
+  }
+
+  .home-link,
+  .watchlist-link,
+  .movies-link,
+  .tv-link {
+    display: none;
+  }
+
+  .second-nav-bar {
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .second-nav-bar {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .selected-page-logo {
+    height: clamp(1.5rem, calc(4vw + 1rem), 3rem);
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .fox-media-logo {
+    display: block;
+    width: clamp(3rem, calc(3vw + 1rem), 3.5rem);
+  }
+
+  .nav-bar-options-display {
+    display: flex !important;
+  }
+
+  .second-nav-bar {
+    display: none;
+  }
+
+  .nav-icons-left-container {
+    display: none;
+  }
+
+  .nav-profile-container {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .small-screen-fox-media-logo {
+    display: none;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .nav-bar-options {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

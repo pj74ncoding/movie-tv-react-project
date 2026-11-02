@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("./Fonts/Oswald-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./Fonts/Poppins-Regular.woff2") format("woff2");
+}
