@@ -1,6 +1,6 @@
 /* Small devices (landscape phones, 576px and up)  */
 
-@media (min-width: 500px) and (max-width: 770px) {
+@media (min-width: 500px) and (max-width: 700px) {
   .nav-icons-left-container > span {
     display: none;
   }
