@@ -45,7 +45,7 @@ html {
 .nav-section {
   width: 100%;
   position: fixed;
-  top: 1px;
+  top: 0px;
 }
 .nav-bar {
   height: clamp(4rem, calc(9vh + 0.5rem), 6rem);
@@ -213,12 +213,12 @@ html {
   transition: all 1s ease-in-out;
 }
 .Hamburger-nav-options {
-  margin-top: clamp(4rem, calc(9vh + 0.5rem), 6rem);
+  margin-top: clamp(4rem, calc(8.9vh + 0.5rem), 6rem);
   height: clamp(13rem, 4vw, 19rem);
   width: 100%;
   transition: all 1s ease-in-out;
-  position: absolute;
-  top: 1px;
+  position: fixed;
+  top: 0px;
 }
 .nav-options {
   height: 100%;
@@ -252,4 +252,38 @@ html {
   color: #ffd35c;
   transform: scale(1.05);
   transition: all 500ms ease-in-out;
+}
+
+/* 
+* Footer
+*/
+
+.footer-container {
+  width: 100%;
+  height: clamp(4rem, calc(6vh + 1rem), 5rem);
+  background-color: rgba(0, 0, 0, 0.801);
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-home-logo {
+  height: clamp(2.6rem, 3vw + 1rem, 2.6rem);
+  border-radius: 4px;
+  border: 1.5px solid #ffd35c;
+}
+
+.footer-link-not-home-page-container {
+  height: clamp(2.6rem, 3vw + 1rem, 2.6rem);
+  border-radius: 4px;
+  border: 1.5px solid white;
+  width: 3.7rem;
+  background-color: black;
+}
+.footer-link-not-home-page-container > span {
+  color: white;
+  font-size: clamp(30px, calc(8vw + 1rem), 35px);
 }

@@ -61,6 +61,10 @@
     width: 3rem;
     height: 3rem;
   }
+
+  .footer-container {
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

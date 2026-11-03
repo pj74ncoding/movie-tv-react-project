@@ -1,13 +1,19 @@
+import { Footer } from "../Footer";
 import { NavSection } from "../Nav/NavSection";
 
 export const Home = () => {
-
   return (
     <>
-        <NavSection page="home"/>
-   
-      <br /><br /><br /><br /><br /><br />
+      <NavSection page="home" />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <p>home</p>
+      <Footer page="home"/>
     </>
   );
 };

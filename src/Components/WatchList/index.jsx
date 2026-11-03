@@ -1,9 +1,10 @@
+import { Footer } from "../Footer";
 import { NavSection } from "../Nav/NavSection";
 
 export const WatchList = () => {
   return (
     <>
-      <NavSection page="watchlist"/>
+      <NavSection page="watchlist" />
       <br />
       <br />
       <br />
@@ -14,6 +15,7 @@ export const WatchList = () => {
       <br />
 
       <p>WatchList</p>
+      <Footer page="watchlist" />
     </>
   );
 };
